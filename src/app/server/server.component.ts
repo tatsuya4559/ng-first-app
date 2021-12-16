@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server.component.scss']
 })
 export class ServerComponent implements OnInit {
+  serverId: number = 10;
+  serverStatus: string = 'offline';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getServerStatus() {
+    return this.serverStatus;
+  }
 }
