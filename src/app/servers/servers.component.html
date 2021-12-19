@@ -19,8 +19,7 @@
 <ng-template #noServer>
   <p>No server was created!</p>
 </ng-template>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 
 <hr>
 <div>
@@ -33,3 +32,11 @@
 <button class="btn btn-secondary" [disabled]="!isAssignmentButtonAvailable"
   (click)="resetUsername()">ASSIGNMENT</button>
 </div>
+
+<button (click)="toggleShowDetail()">Display Details</button>
+<p *ngIf="showDetail">Secret Password = tuna
+</p>
+<div *ngFor="let log of buttonClickLogs; index as i">
+  <span [ngClass]="{'old-log': i>=4}">{{log}}</span>
+</div>
+

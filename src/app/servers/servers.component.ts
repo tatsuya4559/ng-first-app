@@ -11,6 +11,9 @@ export class ServersComponent implements OnInit {
   serverName = 'Test';
   username = '';
   serverCreated = false;
+  servers = ['TestServer', 'TestServer2']
+  showDetail = false;
+  buttonClickLogs = [];
 
   get isAssignmentButtonAvailable() {
     return this.username !== '';
@@ -31,6 +34,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server was created!';
   }
 
@@ -38,4 +42,8 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
 
+  toggleShowDetail() {
+    this.showDetail = !this.showDetail;
+    this.buttonClickLogs.push(this.buttonClickLogs.length + 1);
+  }
 }
