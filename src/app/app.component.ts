@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
+  numbers: number[] = [];
+
+  onIncrement(event: number) {
+    this.numbers.push(event);
+  }
 }

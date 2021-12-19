@@ -7,6 +7,10 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import { Assignment4Component } from './assignment4/assignment4.component';
+import { GameControlComponent } from './assignment4/game-control/game-control.component';
+import { OddComponent } from './assignment4/odd/odd.component';
+import { EvenComponent } from './assignment4/even/even.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
     ServerComponent,
     ServersComponent,
     SuccessAlertComponent,
-    WarningAlertComponent
+    WarningAlertComponent,
+    Assignment4Component,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,

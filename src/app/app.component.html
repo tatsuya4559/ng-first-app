@@ -1,6 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
+      <app-game-control (increment)="onIncrement($event)"></app-game-control>
+      <ng-container *ngFor="let n of numbers">
+        <app-even [n]="n" *ngIf="n % 2 === 0; else odd"></app-even>
+        <ng-template #odd>
+          <app-odd [n]="n"></app-odd>
+        </ng-template>
+      </ng-container>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
       <h3>I'm in the AppComponent</h3>
       <hr>
       <app-servers></app-servers>
