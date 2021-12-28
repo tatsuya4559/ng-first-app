@@ -14,6 +14,7 @@ export class ServersComponent implements OnInit {
   servers = ['TestServer', 'TestServer2']
   showDetail = false;
   buttonClickLogs = [];
+  value = 5;
 
   get isAssignmentButtonAvailable() {
     return this.username !== '';
